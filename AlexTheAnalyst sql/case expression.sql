@@ -1,4 +1,27 @@
--- parks and recreations
+USE parks_and_recreation;
+
+
+/** CASE expression lets you add conditional logic to a `SELECT` statement similar to an `IF`/`ELSE` structure
+    in many programming languages (and comparable to nested `IF` formulas in Excel);
+**/
+
+-- Practice:
+
+SELECT *
+FROM employee_demographics;
+
+SELECT
+    first_name,
+    last_name,
+    age,
+    CASE
+        WHEN age < 30 THEN 'Young'
+        WHEN age < 50 THEN 'Old'
+        ELSE "On Death's Door"
+    END AS age_bracket
+FROM
+    employee_demographics;
+
 
 SELECT 
     CONCAT_WS('_', first_name, last_name) AS full_name,
@@ -36,5 +59,4 @@ FROM
     employee_salary AS emps
         INNER JOIN
     parks_departments AS pd ON pd.department_id = emps.dept_id;
-
 
