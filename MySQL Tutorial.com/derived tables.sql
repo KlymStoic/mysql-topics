@@ -1,6 +1,10 @@
 USE mysql_sample_db;
 
 
+/** Note: A derived table is a subquery used in the `FROM` clause that returns a virtual (temporary-like) result
+        set without needing to create an actual temporary table;
+**/
+
 -- Note: Every derived table must have its own alias;
 
 /** Syntax:
