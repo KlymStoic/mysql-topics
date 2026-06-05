@@ -43,8 +43,8 @@ SELECT
 FROM
     employees
 WHERE
-    jobTitle = 'Sales Rep' AND
-    officeCode = 1;
+    jobTitle = 'Sales Rep'
+    AND officeCode = 1;
 
 SELECT
     lastName,
@@ -54,8 +54,8 @@ SELECT
 FROM
     employees
 WHERE
-    jobTitle = 'Sales Rep' OR
-    officeCode = 1
+    jobTitle = 'Sales Rep'
+    OR officeCode = 1
 ORDER BY
     officeCode,
     jobTitle;
